@@ -5,19 +5,27 @@
 
 ## 语法
 
-user-select：none | text | all | element
+user-select: none | text | all | element
 
-默认值：text
+默认值: text
 
 ## 取值
 
-none：文本不能被选择
+none: 文本不能被选择
 
-text：可以选择文本
+text: 可以选择文本
 
-all：当所有内容作为一个整体时可以被选择。如果双击或者在上下文上点击子元素，那么被选择的部分将是以该子元素向上回溯的最高祖先元素。
+all: 在一个HTML编辑器中，当双击子元素或者上下文时，那么包含该子元素的最顶层元素也会被选中。
 
-element：可以选择文本，但选择范围受元素边界的约束
+element: 允许选择在元素内开始; 但是，选择将包含在该元素的边界内。(仅IE支持)
+
+auto: auto的计算值确定如下：
+
+- 在 ::before 和 ::after 伪元素上，计算属性是 none
+- 如果元素是可编辑元素，则计算值是 contain
+- 否则，如果此元素的父元素的 user-select 的计算值为 all, 计算值则为 all
+- 否则，如果此元素的父级上的 user-select 的计算值为 none, 计算值则为 none
+- 否则，计算值则为 text
 
 ## 实例
 ```HTML
