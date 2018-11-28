@@ -22,7 +22,7 @@ element：可以选择文本，但选择范围受元素边界的约束
 ## 实例
 ```HTML
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8" />
